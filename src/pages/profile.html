@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Spotory — Профиль</title>
+    <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg?v=7">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles/reset.css">
+    <link rel="stylesheet" href="../styles/tokens.css">
+    <link rel="stylesheet" href="../styles/common.css">
+    <link rel="stylesheet" href="../styles/profile.css">
+  </head>
+  <body class="app">
+      <header class="app-header">
+        <a class="app-header__brand" href="./index.html">
+          <img class="app-header__logo" src="../assets/logo.svg" width="32" height="32" alt="">
+          <span class="app-header__name">Spotory</span>
+        </a>
+        <div class="app-header__main">
+          <h1 class="app-header__page-title">Профиль</h1>
+          <div class="app-header__actions">
+            <button class="icon-button" type="button">
+              <img class="icon-button__glyph" src="../assets/icons/search.svg" alt="">
+            </button>
+            <button class="icon-button" type="button">
+              <img class="icon-button__glyph" src="../assets/icons/bell.svg" alt="">
+            </button>
+          </div>
+        </div>
+      </header>
+
+      <div class="app__body">
+      <nav class="tab-bar">
+        <a class="tab-bar__link" href="./index.html">
+          <img class="tab-bar__icon" src="../assets/icons/feed.svg" alt="">
+          Лента
+        </a>
+        <a class="tab-bar__link" href="./calendar.html">
+          <img class="tab-bar__icon" src="../assets/icons/calendar.svg" alt="">
+          Календарь
+        </a>
+        <a class="tab-bar__link" href="./map.html">
+          <img class="tab-bar__icon" src="../assets/icons/map.svg" alt="">
+          Карта
+        </a>
+        <a class="tab-bar__link" href="./communities.html">
+          <img class="tab-bar__icon" src="../assets/icons/communities.svg" alt="">
+          Сообщества
+        </a>
+        <a class="tab-bar__link tab-bar__link--active" href="./profile.html">
+          <img class="tab-bar__icon" src="../assets/icons/profile.svg" alt="">
+          Профиль
+        </a>
+      </nav>
+
+      <main class="app__main">
+        <div class="profile-page">
+          <section class="profile-hero">
+            <img class="profile-hero__avatar" src="../assets/images/fominikh-photo.webp" width="160" height="160" alt="">
+            <div class="profile-hero__identity">
+              <p class="profile-hero__handle">@pavel_climb</p>
+              <h2 id="profile-name" class="profile-hero__name">Павел Фоминых</h2>
+              <p class="profile-hero__meta">32 года · профессиональный тренер</p>
+              <ul class="profile-hero__facts">
+                <li>Санкт-Петербург</li>
+                <li>Стаж 8 лет</li>
+              </ul>
+            </div>
+            <div class="profile-hero__highlights">
+              <div class="profile-hero__highlight">
+                <div>
+                  <span class="profile-hero__highlight-value">273</span>
+                  <span class="profile-hero__highlight-label">тренировки</span>
+                </div>
+              </div>
+              <div class="profile-hero__highlight">
+                <div>
+                  <span class="profile-hero__highlight-value">1,2k</span>
+                  <span class="profile-hero__highlight-label">подписчики</span>
+                </div>
+              </div>
+              <div class="profile-hero__highlight">
+                <div>
+                  <span class="profile-hero__highlight-value">48</span>
+                  <span class="profile-hero__highlight-label">маршруты</span>
+                </div>
+              </div>
+              <div class="profile-hero__highlight">
+                <div>
+                  <span class="profile-hero__highlight-value">12</span>
+                  <span class="profile-hero__highlight-label">площадки</span>
+                </div>
+              </div>
+            </div>
+            <div class="profile-hero__actions">
+              <button class="button button--primary" type="button">Подписаться</button>
+              <button class="button button--ghost" type="button">Написать</button>
+            </div>
+          </section>
+
+          <section class="profile-section profile-section--stats">
+            <h2 id="stats-title" class="profile-section__title">Активность</h2>
+            <div class="profile-stats">
+              <div class="profile-stat">
+                <div>
+                  <span class="profile-stat__value">273</span>
+                  <span class="profile-stat__label">тренировки</span>
+                </div>
+              </div>
+              <div class="profile-stat">
+                <div>
+                  <span class="profile-stat__value">1,2k</span>
+                  <span class="profile-stat__label">подписчики</span>
+                </div>
+              </div>
+              <div class="profile-stat">
+                <div>
+                  <span class="profile-stat__value">48</span>
+                  <span class="profile-stat__label">маршруты</span>
+                </div>
+              </div>
+              <div class="profile-stat">
+                <div>
+                  <span class="profile-stat__value">12</span>
+                  <span class="profile-stat__label">площадки</span>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section class="profile-section profile-section--about">
+            <h2 id="about-title" class="profile-section__title">О себе</h2>
+            <p class="profile-about__text">
+              Тренирую скалолазание и ОФП для новичков и продвинутых. Веду групповые и персональные занятия,
+              помогаю готовиться к выездам на скалы и соревнованиям. Люблю outdoor, велосипед и длинные
+              прогулки по городу с маршрутами в Spotory.
+            </p>
+            <h3 class="profile-about__subtitle">Виды спорта</h3>
+            <div class="profile-tags">
+              <span class="tag tag--climbing">Скалолазание</span>
+              <span class="tag tag--cycling">Велосипед</span>
+              <span class="tag tag--tourism">Туризм</span>
+              <span class="tag tag--run">Бег</span>
+            </div>
+          </section>
+
+          <section class="profile-section profile-section--route">
+            <h2 id="map-title" class="profile-section__title">Недавний маршрут</h2>
+            <p class="profile-route__meta">Велосипед · 24,6 км · 1 октября 2026</p>
+            <div class="profile-route__map">
+              <img class="profile-mini-map" src="../assets/images/map.webp" width="640" height="360" alt="">
+            </div>
+          </section>
+
+          <section class="profile-section profile-section--clubs">
+            <h2 id="clubs-title" class="profile-section__title">Мои площадки</h2>
+            <ul class="profile-clubs">
+              <li class="profile-club">
+                <img class="profile-club__logo" src="../assets/images/severnaya-stena-logo.webp" width="44" height="44" alt="">
+                <div class="profile-club__body">
+                  <p class="profile-club__name">Северная стена</p>
+                  <p class="profile-club__meta">Скалодром · тренер</p>
+                </div>
+              </li>
+              <li class="profile-club">
+                <img class="profile-club__logo" src="../assets/images/dirt-spb.webp" width="44" height="44" alt="">
+                <div class="profile-club__body">
+                  <p class="profile-club__name">Bike &amp; dirt SPB</p>
+                  <p class="profile-club__meta">Велоклуб · участник</p>
+                </div>
+              </li>
+              <li class="profile-club">
+                <img class="profile-club__logo" src="../assets/images/park-300-logo.webp" width="44" height="44" alt="">
+                <div class="profile-club__body">
+                  <p class="profile-club__name">Парк 300-летия</p>
+                  <p class="profile-club__meta">Outdoor · организатор</p>
+                </div>
+              </li>
+            </ul>
+          </section>
+
+          <section class="profile-section profile-section--events">
+            <h2 id="events-title" class="profile-section__title">Ближайшие тренировки</h2>
+            <ul class="profile-events">
+              <li class="profile-event">
+                <time class="profile-event__date" datetime="2026-10-05">5 окт</time>
+                <div class="profile-event__body">
+                  <p class="profile-event__title">Силовая на скалодроме</p>
+                  <p class="profile-event__meta">19:00 · Северная стена · 8 мест</p>
+                  <span class="tag tag--climbing profile-event__tag">Скалолазание</span>
+                </div>
+              </li>
+              <li class="profile-event">
+                <time class="profile-event__date" datetime="2026-10-08">8 окт</time>
+                <div class="profile-event__body">
+                  <p class="profile-event__title">Вечерний заезд по набережным</p>
+                  <p class="profile-event__meta">18:30 · Bike &amp; dirt SPB · 18 км</p>
+                  <span class="tag tag--cycling profile-event__tag">Велосипед</span>
+                </div>
+              </li>
+            </ul>
+          </section>
+        </div>
+      </main>
+      </div>
+  </body>
+</html>

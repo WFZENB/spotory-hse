@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Spotory — Сообщества</title>
+    <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg?v=7">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles/reset.css">
+    <link rel="stylesheet" href="../styles/tokens.css">
+    <link rel="stylesheet" href="../styles/common.css">
+    <link rel="stylesheet" href="../styles/communities.css">
+  </head>
+  <body class="app">
+      <header class="app-header">
+        <a class="app-header__brand" href="./index.html">
+          <img class="app-header__logo" src="../assets/logo.svg" width="32" height="32" alt="">
+          <span class="app-header__name">Spotory</span>
+        </a>
+        <div class="app-header__main">
+          <h1 class="app-header__page-title">Сообщества</h1>
+          <div class="app-header__actions">
+            <button class="icon-button" type="button">
+              <img class="icon-button__glyph" src="../assets/icons/search.svg" alt="">
+            </button>
+            <button class="icon-button" type="button">
+              <img class="icon-button__glyph" src="../assets/icons/bell.svg" alt="">
+            </button>
+          </div>
+        </div>
+      </header>
+
+      <div class="app__body">
+      <nav class="tab-bar">
+        <a class="tab-bar__link" href="./index.html">
+          <img class="tab-bar__icon" src="../assets/icons/feed.svg" alt="">
+          Лента
+        </a>
+        <a class="tab-bar__link" href="./calendar.html">
+          <img class="tab-bar__icon" src="../assets/icons/calendar.svg" alt="">
+          Календарь
+        </a>
+        <a class="tab-bar__link" href="./map.html">
+          <img class="tab-bar__icon" src="../assets/icons/map.svg" alt="">
+          Карта
+        </a>
+        <a class="tab-bar__link tab-bar__link--active" href="./communities.html">
+          <img class="tab-bar__icon" src="../assets/icons/communities.svg" alt="">
+          Сообщества
+        </a>
+        <a class="tab-bar__link" href="./profile.html">
+          <img class="tab-bar__icon" src="../assets/icons/profile.svg" alt="">
+          Профиль
+        </a>
+      </nav>
+
+      <main class="app__main">
+        <div class="communities-page">
+          <section class="community-list">
+            <h2 id="climbing-title" class="community-list__section-title">Скалодромы</h2>
+            <article class="community-card">
+              <img class="community-card__logo" src="../assets/images/severnaya-stena-logo.webp" width="44" height="44" alt="">
+              <div class="community-card__body">
+                <h3 class="community-card__name">Северная стена</h3>
+                <p class="community-card__subtitle">Скалодром · Санкт-Петербург</p>
+                <div class="community-card__tags">
+                  <span class="tag tag--climbing">Скалолазание</span>
+                  <span class="tag tag--gym">Боулдеринг</span>
+                </div>
+              </div>
+              <img class="community-card__chevron" src="../assets/icons/chevron.svg" alt="">
+            </article>
+            <article class="community-card">
+              <img class="community-card__logo" src="../assets/images/el-capitan.webp" width="44" height="44" alt="">
+              <div class="community-card__body">
+                <h3 class="community-card__name">El Capitan</h3>
+                <p class="community-card__subtitle">Скалодром · центр</p>
+                <div class="community-card__tags">
+                  <span class="tag tag--climbing">Скалолазание</span>
+                </div>
+              </div>
+              <img class="community-card__chevron" src="../assets/icons/chevron.svg" alt="">
+            </article>
+            <article class="community-card">
+              <img class="community-card__logo" src="../assets/images/igels.webp" width="44" height="44" alt="">
+              <div class="community-card__body">
+                <h3 class="community-card__name">Игелс</h3>
+                <p class="community-card__subtitle">Скалодром · парковая зона</p>
+                <div class="community-card__tags">
+                  <span class="tag tag--climbing">Скалолазание</span>
+                  <span class="tag tag--gym">Боулдеринг</span>
+                  <span class="tag tag--parkour">Паркур</span>
+                </div>
+              </div>
+              <img class="community-card__chevron" src="../assets/icons/chevron.svg" alt="">
+            </article>
+            <article class="community-card">
+              <img class="community-card__logo" src="../assets/images/energiya-vysoty.webp" width="44" height="44" alt="">
+              <div class="community-card__body">
+                <h3 class="community-card__name">Энергия Высоты</h3>
+                <p class="community-card__subtitle">Скалодром · Василеостровский</p>
+                <div class="community-card__tags">
+                  <span class="tag tag--climbing">Скалолазание</span>
+                  <span class="tag tag--gym">Боулдеринг</span>
+                  <span class="tag tag--ropes">Веревочный парк</span>
+                </div>
+              </div>
+              <img class="community-card__chevron" src="../assets/icons/chevron.svg" alt="">
+            </article>
+          </section>
+
+          <section class="community-list">
+            <h2 id="bike-title" class="community-list__section-title">Bike &amp; dirt</h2>
+            <article class="community-card">
+              <img class="community-card__logo" src="../assets/images/dirt-spb.webp" width="44" height="44" alt="">
+              <div class="community-card__body">
+                <h3 class="community-card__name">Bike &amp; dirt SPB</h3>
+                <p class="community-card__subtitle">Велоклуб · город и трассы</p>
+                <div class="community-card__tags">
+                  <span class="tag tag--cycling">Велосипед</span>
+                </div>
+              </div>
+              <img class="community-card__chevron" src="../assets/icons/chevron.svg" alt="">
+            </article>
+            <article class="community-card">
+              <img class="community-card__logo" src="../assets/images/freak-spot.webp" width="44" height="44" alt="">
+              <div class="community-card__body">
+                <h3 class="community-card__name">FREAK Spot</h3>
+                <p class="community-card__subtitle">Dirt · pump-track</p>
+                <div class="community-card__tags">
+                  <span class="tag tag--cycling">Велосипед</span>
+                </div>
+              </div>
+              <img class="community-card__chevron" src="../assets/icons/chevron.svg" alt="">
+            </article>
+          </section>
+
+          <section class="community-list">
+            <h2 id="outdoor-title" class="community-list__section-title">Outdoor и парки</h2>
+            <article class="community-card">
+              <img class="community-card__logo" src="../assets/images/park-300-logo.webp" width="44" height="44" alt="">
+              <div class="community-card__body">
+                <h3 class="community-card__name">Парк 300-летия</h3>
+                <p class="community-card__subtitle">Парк · пробежки и встречи</p>
+                <div class="community-card__tags">
+                  <span class="tag tag--run">Бег</span>
+                  <span class="tag tag--tourism">Туризм</span>
+                </div>
+              </div>
+              <img class="community-card__chevron" src="../assets/icons/chevron.svg" alt="">
+            </article>
+            <article class="community-card">
+              <img class="community-card__logo" src="../assets/images/start.webp" width="44" height="44" alt="">
+              <div class="community-card__body">
+                <h3 class="community-card__name">Старт</h3>
+                <p class="community-card__subtitle">Беговой клуб · набережные</p>
+                <div class="community-card__tags">
+                  <span class="tag tag--run">Бег</span>
+                </div>
+              </div>
+              <img class="community-card__chevron" src="../assets/icons/chevron.svg" alt="">
+            </article>
+          </section>
+        </div>
+      </main>
+      </div>
+  </body>
+</html>
