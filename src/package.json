@@ -1,0 +1,13 @@
+{
+  "name": "spotory-hse",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Spotory — учебная HTML/CSS вёрстка (HSE ДЗ №1)",
+  "scripts": {
+    "start": "parcel ./pages/*.html",
+    "build": "parcel build ./pages/*.html"
+  },
+  "devDependencies": {
+    "parcel": "^2.16.4"
+  }
+}
