@@ -1,0 +1,23 @@
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Секреты
+.env
+.env.*
+!.env.example
+
+# Node / Parcel — npm-проект в src/
+src/node_modules/
+src/dist/
+src/.parcel-cache/
+src/*.log
+src/npm-debug.log*
+
+/resources/
