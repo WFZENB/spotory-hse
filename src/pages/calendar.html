@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Spotory — Календарь</title>
+    <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg?v=7">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles/reset.css">
+    <link rel="stylesheet" href="../styles/tokens.css">
+    <link rel="stylesheet" href="../styles/common.css">
+    <link rel="stylesheet" href="../styles/calendar.css">
+  </head>
+  <body class="app">
+      <header class="app-header">
+        <a class="app-header__brand" href="./index.html">
+          <img class="app-header__logo" src="../assets/logo.svg" width="32" height="32" alt="">
+          <span class="app-header__name">Spotory</span>
+        </a>
+        <div class="app-header__main">
+          <h1 class="app-header__page-title">Календарь</h1>
+          <div class="app-header__actions">
+            <button class="icon-button" type="button">
+              <img class="icon-button__glyph" src="../assets/icons/search.svg" alt="">
+            </button>
+            <button class="icon-button" type="button">
+              <img class="icon-button__glyph" src="../assets/icons/bell.svg" alt="">
+            </button>
+          </div>
+        </div>
+      </header>
+
+      <div class="app__body">
+      <nav class="tab-bar">
+        <a class="tab-bar__link" href="./index.html">
+          <img class="tab-bar__icon" src="../assets/icons/feed.svg" alt="">
+          Лента
+        </a>
+        <a class="tab-bar__link tab-bar__link--active" href="./calendar.html">
+          <img class="tab-bar__icon" src="../assets/icons/calendar.svg" alt="">
+          Календарь
+        </a>
+        <a class="tab-bar__link" href="./map.html">
+          <img class="tab-bar__icon" src="../assets/icons/map.svg" alt="">
+          Карта
+        </a>
+        <a class="tab-bar__link" href="./communities.html">
+          <img class="tab-bar__icon" src="../assets/icons/communities.svg" alt="">
+          Сообщества
+        </a>
+        <a class="tab-bar__link" href="./profile.html">
+          <img class="tab-bar__icon" src="../assets/icons/profile.svg" alt="">
+          Профиль
+        </a>
+      </nav>
+
+      <main class="app__main">
+        <div class="calendar-page">
+          <section class="calendar-widget">
+            <div class="calendar-widget__month">
+              <span id="calendar-month">Октябрь 2026</span>
+            </div>
+            <div class="calendar-widget__grid">
+              <span class="calendar-widget__weekday">Пн</span>
+              <span class="calendar-widget__weekday">Вт</span>
+              <span class="calendar-widget__weekday">Ср</span>
+              <span class="calendar-widget__weekday">Чт</span>
+              <span class="calendar-widget__weekday">Пт</span>
+              <span class="calendar-widget__weekday">Сб</span>
+              <span class="calendar-widget__weekday">Вс</span>
+              <span class="calendar-widget__day calendar-widget__day--muted">29</span>
+              <span class="calendar-widget__day calendar-widget__day--muted">30</span>
+              <span class="calendar-widget__day">1</span>
+              <span class="calendar-widget__day">2</span>
+              <span class="calendar-widget__day calendar-widget__day--selected calendar-widget__day--event">3</span>
+              <span class="calendar-widget__day">4</span>
+              <span class="calendar-widget__day">5</span>
+              <span class="calendar-widget__day calendar-widget__day--event">6</span>
+              <span class="calendar-widget__day">7</span>
+              <span class="calendar-widget__day">8</span>
+              <span class="calendar-widget__day">9</span>
+              <span class="calendar-widget__day">10</span>
+              <span class="calendar-widget__day calendar-widget__day--event">11</span>
+              <span class="calendar-widget__day">12</span>
+              <span class="calendar-widget__day">13</span>
+              <span class="calendar-widget__day calendar-widget__day--event">14</span>
+              <span class="calendar-widget__day">15</span>
+              <span class="calendar-widget__day">16</span>
+              <span class="calendar-widget__day">17</span>
+              <span class="calendar-widget__day calendar-widget__day--event">18</span>
+              <span class="calendar-widget__day">19</span>
+              <span class="calendar-widget__day">20</span>
+              <span class="calendar-widget__day">21</span>
+              <span class="calendar-widget__day">22</span>
+              <span class="calendar-widget__day">23</span>
+              <span class="calendar-widget__day">24</span>
+              <span class="calendar-widget__day calendar-widget__day--event">25</span>
+              <span class="calendar-widget__day">26</span>
+              <span class="calendar-widget__day">27</span>
+              <span class="calendar-widget__day calendar-widget__day--event">28</span>
+              <span class="calendar-widget__day">29</span>
+              <span class="calendar-widget__day">30</span>
+              <span class="calendar-widget__day">31</span>
+              <span class="calendar-widget__day calendar-widget__day--muted">1</span>
+              <span class="calendar-widget__day calendar-widget__day--muted">2</span>
+            </div>
+          </section>
+
+          <section class="event-list">
+            <h3 id="events-title" class="event-list__title">События</h3>
+            <div class="event-list__items">
+            <article class="event-card">
+              <div class="event-card__date">
+                <span class="event-card__day">3</span>
+                <span class="event-card__month">окт</span>
+              </div>
+              <h4 class="event-card__name">Соревнования по скалолазанию</h4>
+              <p class="event-card__venue">Северная стена · Бухарестская</p>
+            </article>
+            <article class="event-card">
+              <div class="event-card__date">
+                <span class="event-card__day">6</span>
+                <span class="event-card__month">окт</span>
+              </div>
+              <h4 class="event-card__name">День улучшения спота</h4>
+              <p class="event-card__venue">FREAK Spot · dirt</p>
+            </article>
+            <article class="event-card">
+              <div class="event-card__date">
+                <span class="event-card__day">11</span>
+                <span class="event-card__month">окт</span>
+              </div>
+              <h4 class="event-card__name">Открытая тренировка для новичков</h4>
+              <p class="event-card__venue">El Capitan · боулдеринг</p>
+            </article>
+            <article class="event-card">
+              <div class="event-card__date">
+                <span class="event-card__day">14</span>
+                <span class="event-card__month">окт</span>
+              </div>
+              <h4 class="event-card__name">Групповая велопрогулка</h4>
+              <p class="event-card__venue">Старт · набережная Фонтанки</p>
+            </article>
+            <article class="event-card">
+              <div class="event-card__date">
+                <span class="event-card__day">18</span>
+                <span class="event-card__month">окт</span>
+              </div>
+              <h4 class="event-card__name">Вечерний boulder session</h4>
+              <p class="event-card__venue">Северная стена · Петроградская</p>
+            </article>
+            <article class="event-card">
+              <div class="event-card__date">
+                <span class="event-card__day">25</span>
+                <span class="event-card__month">окт</span>
+              </div>
+              <h4 class="event-card__name">Трейл-забег 8 км</h4>
+              <p class="event-card__venue">Игелс · парковая зона</p>
+            </article>
+            <article class="event-card">
+              <div class="event-card__date">
+                <span class="event-card__day">28</span>
+                <span class="event-card__month">окт</span>
+              </div>
+              <h4 class="event-card__name">Йога и recovery на открытом воздухе</h4>
+              <p class="event-card__venue">Энергия Высоты · 10:00</p>
+            </article>
+            </div>
+          </section>
+        </div>
+      </main>
+      </div>
+  </body>
+</html>

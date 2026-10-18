@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Spotory — Новостная лента</title>
+    <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg?v=7">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles/reset.css">
+    <link rel="stylesheet" href="../styles/tokens.css">
+    <link rel="stylesheet" href="../styles/common.css">
+    <link rel="stylesheet" href="../styles/feed.css">
+  </head>
+  <body class="app">
+      <header class="app-header">
+        <a class="app-header__brand" href="./index.html">
+          <img class="app-header__logo" src="../assets/logo.svg" width="32" height="32" alt="">
+          <span class="app-header__name">Spotory</span>
+        </a>
+        <div class="app-header__main">
+          <h1 class="app-header__page-title">Лента</h1>
+          <div class="app-header__actions">
+            <button class="icon-button" type="button">
+              <img class="icon-button__glyph" src="../assets/icons/search.svg" alt="">
+            </button>
+            <button class="icon-button" type="button">
+              <img class="icon-button__glyph" src="../assets/icons/bell.svg" alt="">
+            </button>
+          </div>
+        </div>
+      </header>
+
+      <div class="app__body">
+      <nav class="tab-bar">
+        <a class="tab-bar__link tab-bar__link--active" href="./index.html">
+          <img class="tab-bar__icon" src="../assets/icons/feed.svg" alt="">
+          Лента
+        </a>
+        <a class="tab-bar__link" href="./calendar.html">
+          <img class="tab-bar__icon" src="../assets/icons/calendar.svg" alt="">
+          Календарь
+        </a>
+        <a class="tab-bar__link" href="./map.html">
+          <img class="tab-bar__icon" src="../assets/icons/map.svg" alt="">
+          Карта
+        </a>
+        <a class="tab-bar__link" href="./communities.html">
+          <img class="tab-bar__icon" src="../assets/icons/communities.svg" alt="">
+          Сообщества
+        </a>
+        <a class="tab-bar__link" href="./profile.html">
+          <img class="tab-bar__icon" src="../assets/icons/profile.svg" alt="">
+          Профиль
+        </a>
+      </nav>
+
+      <main class="app__main">
+        <section class="feed">
+
+          <article class="feed__post post-card">
+            <header class="post-card__header">
+              <img class="post-card__avatar" src="../assets/images/severnaya-stena-logo.webp" width="40" height="40" alt="">
+              <div class="post-card__meta">
+                <p class="post-card__author">Северная стена</p>
+                <time class="post-card__time" datetime="2026-10-02">2 октября · 18:40</time>
+              </div>
+            </header>
+            <div class="post-card__tags">
+              <span class="tag tag--climbing">Скалолазание</span>
+              <span class="tag tag--gym">Боулдеринг</span>
+            </div>
+            <p class="post-card__text">
+              Открытая тренировка для новичков в субботу. Приходите в 11:00 — разминка, техника и свободное лазание.
+            </p>
+            <img class="post-card__media" src="../assets/images/post-severnaya-stena.webp" width="640" height="400" alt="">
+            <footer class="post-card__footer">
+              <div class="post-card__stats">
+                <span class="post-card__stat">
+                  <img class="post-card__stat-icon" src="../assets/icons/like.svg" alt="">
+                  124
+                </span>
+                <span class="post-card__stat">
+                  <img class="post-card__stat-icon" src="../assets/icons/comment.svg" alt="">
+                  18
+                </span>
+              </div>
+            </footer>
+          </article>
+
+          <article class="feed__post post-card">
+            <header class="post-card__header">
+              <img class="post-card__avatar" src="../assets/images/fominikh-photo.webp" width="40" height="40" alt="">
+              <div class="post-card__meta">
+                <p class="post-card__author">Павел Фоминых</p>
+                <time class="post-card__time" datetime="2026-10-01">1 октября · 07:15</time>
+              </div>
+            </header>
+            <div class="post-card__tags">
+              <span class="tag tag--run">Бег</span>
+            </div>
+            <p class="post-card__text">Утренний круг по набережной — 5 км, лёгкий темп. Кто со мной в четверг?</p>
+            <img class="post-card__media" src="../assets/images/post-run-embankment.webp" width="640" height="400" alt="">
+            <footer class="post-card__footer">
+              <div class="post-card__stats">
+                <span class="post-card__stat">
+                  <img class="post-card__stat-icon" src="../assets/icons/like.svg" alt="">
+                  42
+                </span>
+                <span class="post-card__stat">
+                  <img class="post-card__stat-icon" src="../assets/icons/comment.svg" alt="">
+                  6
+                </span>
+              </div>
+            </footer>
+          </article>
+
+          <article class="feed__post post-card">
+            <header class="post-card__header">
+              <img class="post-card__avatar" src="../assets/images/dirt-spb.webp" width="40" height="40" alt="">
+              <div class="post-card__meta">
+                <p class="post-card__author">Bike &amp; dirt SPB</p>
+                <time class="post-card__time" datetime="2026-09-30">30 сентября · 20:10</time>
+              </div>
+            </header>
+            <div class="post-card__tags">
+              <span class="tag tag--cycling">Велосипед</span>
+            </div>
+            <p class="post-card__text">
+              Субботний выезд на FREAK Spot: разминка, несколько заездов по pump-track и чай после. Берите шлем и перчатки.
+            </p>
+            <img class="post-card__media" src="../assets/images/post-dirt.webp" width="640" height="400" alt="">
+            <footer class="post-card__footer">
+              <div class="post-card__stats">
+                <span class="post-card__stat">
+                  <img class="post-card__stat-icon" src="../assets/icons/like.svg" alt="">
+                  89
+                </span>
+                <span class="post-card__stat">
+                  <img class="post-card__stat-icon" src="../assets/icons/comment.svg" alt="">
+                  11
+                </span>
+              </div>
+            </footer>
+          </article>
+        </section>
+      </main>
+      </div>
+  </body>
+</html>

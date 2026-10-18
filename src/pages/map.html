@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Spotory — Карта</title>
+    <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg?v=7">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles/reset.css">
+    <link rel="stylesheet" href="../styles/tokens.css">
+    <link rel="stylesheet" href="../styles/common.css">
+    <link rel="stylesheet" href="../styles/map.css">
+  </head>
+  <body class="app">
+      <header class="app-header">
+        <a class="app-header__brand" href="./index.html">
+          <img class="app-header__logo" src="../assets/logo.svg" width="32" height="32" alt="">
+          <span class="app-header__name">Spotory</span>
+        </a>
+        <div class="app-header__main">
+          <h1 class="app-header__page-title">Карта</h1>
+          <div class="app-header__actions">
+            <button class="icon-button" type="button">
+              <img class="icon-button__glyph" src="../assets/icons/search.svg" alt="">
+            </button>
+            <button class="icon-button" type="button">
+              <img class="icon-button__glyph" src="../assets/icons/bell.svg" alt="">
+            </button>
+          </div>
+        </div>
+      </header>
+
+      <div class="app__body">
+      <nav class="tab-bar">
+        <a class="tab-bar__link" href="./index.html">
+          <img class="tab-bar__icon" src="../assets/icons/feed.svg" alt="">
+          Лента
+        </a>
+        <a class="tab-bar__link" href="./calendar.html">
+          <img class="tab-bar__icon" src="../assets/icons/calendar.svg" alt="">
+          Календарь
+        </a>
+        <a class="tab-bar__link tab-bar__link--active" href="./map.html">
+          <img class="tab-bar__icon" src="../assets/icons/map.svg" alt="">
+          Карта
+        </a>
+        <a class="tab-bar__link" href="./communities.html">
+          <img class="tab-bar__icon" src="../assets/icons/communities.svg" alt="">
+          Сообщества
+        </a>
+        <a class="tab-bar__link" href="./profile.html">
+          <img class="tab-bar__icon" src="../assets/icons/profile.svg" alt="">
+          Профиль
+        </a>
+      </nav>
+
+      <main class="app__main app__main--map">
+        <div class="map-page">
+          <div class="map-stage">
+            <div class="map-stage__viewport">
+              <img
+                class="map-stage__image"
+                src="../assets/images/map.webp"
+                width="2709"
+                height="1629"
+                alt=""
+              >
+              <div class="map-pin map-pin--elcap">
+                <span class="map-pin__marker"></span>
+              </div>
+              <div class="map-pin map-pin--north map-pin--active">
+                <span class="map-pin__marker"></span>
+                <span class="map-pin__label">Северная стена</span>
+              </div>
+              <div class="map-pin map-pin--igels">
+                <span class="map-pin__marker"></span>
+              </div>
+            </div>
+
+            <div class="map-stage__toolbar map-surface">
+              <div class="search-field">
+                <label class="visually-hidden" for="map-search">Площадка или район</label>
+                <img src="../assets/icons/search.svg" width="20" height="20" alt="">
+                <input class="search-field__input" id="map-search" type="search" name="q" placeholder="Площадка или район">
+              </div>
+              <div class="map-stage__filters">
+                <button class="map-filter map-filter--active" type="button">Все</button>
+                <button class="map-filter" type="button">Скалолазание</button>
+                <button class="map-filter" type="button">Велосипед</button>
+                <button class="map-filter" type="button">Бег</button>
+              </div>
+            </div>
+
+            <aside class="map-spot-panel map-surface">
+              <div class="map-spot-panel__header">
+                <h2 id="map-spot-title" class="map-spot-panel__title">Северная стена</h2>
+                <div class="map-spot-panel__chips">
+                  <span class="map-spot-chip">Скалолазание</span>
+                  <span class="map-spot-chip">Скалодром</span>
+                  <span class="map-spot-chip">Открыто</span>
+                </div>
+              </div>
+              <div class="map-spot-panel__body">
+                <div class="map-spot-panel__row">
+                  <span class="map-spot-panel__label">Адрес</span>
+                  <span class="map-spot-panel__value">Бухарестская ул., 30 · 1,2 км</span>
+                </div>
+                <div class="map-spot-panel__row">
+                  <span class="map-spot-panel__label">Часы работы</span>
+                  <span class="map-spot-panel__value">Ежедневно 10:00–23:00</span>
+                </div>
+                <div class="map-spot-panel__actions">
+                  <a class="button button--primary" href="./communities.html">Подробнее</a>
+                  <button class="button button--ghost" type="button">Маршрут</button>
+                </div>
+              </div>
+            </aside>
+          </div>
+        </div>
+      </main>
+      </div>
+  </body>
+</html>
