@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="../styles/reset.css">
     <link rel="stylesheet" href="../styles/tokens.css">
     <link rel="stylesheet" href="../styles/common.css">
+    <link rel="stylesheet" href="../styles/feed.css">
     <link rel="stylesheet" href="../styles/profile.css">
   </head>
   <body class="app">
@@ -20,12 +21,12 @@
           <span class="app-header__name">Spotory</span>
         </a>
         <div class="app-header__main">
-          <h1 class="app-header__page-title">Профиль</h1>
+          <h1 class="app-header__page-title">pavel_climb</h1>
           <div class="app-header__actions">
-            <button class="icon-button" type="button">
+            <button class="icon-button" type="button" aria-label="Поиск">
               <img class="icon-button__glyph" src="../assets/icons/search.svg" alt="">
             </button>
-            <button class="icon-button" type="button">
+            <button class="icon-button" type="button" aria-label="Уведомления">
               <img class="icon-button__glyph" src="../assets/icons/bell.svg" alt="">
             </button>
           </div>
@@ -59,152 +60,154 @@
       <main class="app__main">
         <div class="profile-page">
           <section class="profile-hero">
-            <img class="profile-hero__avatar" src="../assets/images/fominikh-photo.webp" width="160" height="160" alt="">
-            <div class="profile-hero__identity">
-              <p class="profile-hero__handle">@pavel_climb</p>
-              <h2 id="profile-name" class="profile-hero__name">Павел Фоминых</h2>
-              <p class="profile-hero__meta">32 года · профессиональный тренер</p>
-              <ul class="profile-hero__facts">
-                <li>Санкт-Петербург</li>
-                <li>Стаж 8 лет</li>
+            <div class="profile-hero__head">
+              <img class="profile-hero__avatar" src="../assets/images/fominikh-photo.webp" width="160" height="160" alt="">
+              <div class="profile-hero__main">
+                <div class="profile-hero__top">
+                  <div class="profile-hero__identity">
+                    <h2 id="profile-name" class="profile-hero__name">Павел Фоминых</h2>
+                    <p class="profile-hero__meta">32 года · профессиональный тренер</p>
+                  </div>
+                  <div class="profile-hero__actions">
+                    <button class="button button--primary profile-hero__action" type="button" aria-label="Подписаться">
+                      <img class="profile-hero__action-icon" src="../assets/icons/user-plus.svg" width="18" height="18" alt="" aria-hidden="true">
+                      <span class="profile-hero__action-text">Подписаться</span>
+                    </button>
+                    <button class="button button--ghost profile-hero__action" type="button" aria-label="Написать">
+                      <img class="profile-hero__action-icon" src="../assets/icons/comment.svg" width="18" height="18" alt="" aria-hidden="true">
+                      <span class="profile-hero__action-text">Написать</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <ul class="profile-hero__metrics" aria-label="Активность">
+                <li class="profile-hero__metric">
+                  <span class="profile-hero__metric-value">273</span>
+                  <span class="profile-hero__metric-label">тренировки</span>
+                </li>
+                <li class="profile-hero__metric">
+                  <span class="profile-hero__metric-value">1,2k</span>
+                  <span class="profile-hero__metric-label">подписчики</span>
+                </li>
+                <li class="profile-hero__metric">
+                  <span class="profile-hero__metric-value">48</span>
+                  <span class="profile-hero__metric-label">маршруты</span>
+                </li>
+                <li class="profile-hero__metric">
+                  <span class="profile-hero__metric-value">12</span>
+                  <span class="profile-hero__metric-label">площадки</span>
+                </li>
               </ul>
             </div>
-            <div class="profile-hero__highlights">
-              <div class="profile-hero__highlight">
-                <div>
-                  <span class="profile-hero__highlight-value">273</span>
-                  <span class="profile-hero__highlight-label">тренировки</span>
+            <div class="profile-hero__glance">
+              <div class="profile-hero__glance-block">
+                <h3 class="profile-hero__glance-title" id="clubs-title">Мои площадки</h3>
+                <div class="profile-preview profile-preview--hero" id="profile-spots-preview">
+                  <div class="profile-preview__row">
+                    <button class="profile-preview__featured profile-club profile-preview__hit" type="button" data-profile-spots-open aria-label="Подробнее: Северная стена">
+                      <img class="profile-club__logo" src="../assets/images/severnaya-stena-logo.webp" width="44" height="44" alt="">
+                      <div class="profile-club__body">
+                        <p class="profile-club__name">Северная стена</p>
+                        <p class="profile-club__meta">Скалодром · тренер</p>
+                      </div>
+                    </button>
+                    <button class="profile-preview__more-btn" type="button" data-profile-spots-all aria-label="Показать все площадки">+2</button>
+                  </div>
                 </div>
               </div>
-              <div class="profile-hero__highlight">
-                <div>
-                  <span class="profile-hero__highlight-value">1,2k</span>
-                  <span class="profile-hero__highlight-label">подписчики</span>
-                </div>
-              </div>
-              <div class="profile-hero__highlight">
-                <div>
-                  <span class="profile-hero__highlight-value">48</span>
-                  <span class="profile-hero__highlight-label">маршруты</span>
-                </div>
-              </div>
-              <div class="profile-hero__highlight">
-                <div>
-                  <span class="profile-hero__highlight-value">12</span>
-                  <span class="profile-hero__highlight-label">площадки</span>
-                </div>
-              </div>
-            </div>
-            <div class="profile-hero__actions">
-              <button class="button button--primary" type="button">Подписаться</button>
-              <button class="button button--ghost" type="button">Написать</button>
-            </div>
-          </section>
-
-          <section class="profile-section profile-section--stats">
-            <h2 id="stats-title" class="profile-section__title">Активность</h2>
-            <div class="profile-stats">
-              <div class="profile-stat">
-                <div>
-                  <span class="profile-stat__value">273</span>
-                  <span class="profile-stat__label">тренировки</span>
-                </div>
-              </div>
-              <div class="profile-stat">
-                <div>
-                  <span class="profile-stat__value">1,2k</span>
-                  <span class="profile-stat__label">подписчики</span>
-                </div>
-              </div>
-              <div class="profile-stat">
-                <div>
-                  <span class="profile-stat__value">48</span>
-                  <span class="profile-stat__label">маршруты</span>
-                </div>
-              </div>
-              <div class="profile-stat">
-                <div>
-                  <span class="profile-stat__value">12</span>
-                  <span class="profile-stat__label">площадки</span>
+              <div class="profile-hero__glance-block">
+                <h3 class="profile-hero__glance-title" id="events-title">Ближайшие тренировки</h3>
+                <div class="profile-preview profile-preview--hero" id="profile-events-preview">
+                  <div class="profile-preview__row">
+                    <button class="profile-preview__featured profile-event profile-preview__hit profile-preview__event" type="button" data-profile-events-open aria-label="Подробнее: Силовая на скалодроме">
+                      <time class="profile-event__date" datetime="2026-10-05">
+                        <span class="profile-event__date-day">5</span>
+                        <span class="profile-event__date-month">окт</span>
+                      </time>
+                      <div class="profile-event__body">
+                        <p class="profile-event__title">Силовая на скалодроме</p>
+                        <p class="profile-event__meta">19:00 · Северная стена · 8 мест</p>
+                      </div>
+                    </button>
+                    <button class="profile-preview__more-btn profile-preview__more-btn--all" type="button" data-profile-events-all aria-label="Показать все тренировки">Все</button>
+                  </div>
                 </div>
               </div>
             </div>
           </section>
 
-          <section class="profile-section profile-section--about">
-            <h2 id="about-title" class="profile-section__title">О себе</h2>
-            <p class="profile-about__text">
-              Тренирую скалолазание и ОФП для новичков и продвинутых. Веду групповые и персональные занятия,
-              помогаю готовиться к выездам на скалы и соревнованиям. Люблю outdoor, велосипед и длинные
-              прогулки по городу с маршрутами в Spotory.
-            </p>
-            <h3 class="profile-about__subtitle">Виды спорта</h3>
-            <div class="profile-tags">
-              <span class="tag tag--climbing">Скалолазание</span>
-              <span class="tag tag--cycling">Велосипед</span>
-              <span class="tag tag--tourism">Туризм</span>
-              <span class="tag tag--run">Бег</span>
+          <div class="profile-strip">
+            <section class="profile-section profile-section--about profile-strip__panel">
+              <h2 id="about-title" class="profile-section__title">О себе</h2>
+              <p class="profile-about__text">
+                Тренирую скалолазание и ОФП для новичков и продвинутых. Веду групповые и персональные занятия,
+                помогаю готовиться к выездам на скалы и соревнованиям. Люблю outdoor, велосипед и длинные
+                прогулки по городу с маршрутами в Spotory.
+              </p>
+              <h3 class="profile-about__subtitle">Виды спорта</h3>
+              <div class="profile-tags">
+                <span class="tag tag--climbing">Скалолазание</span>
+                <span class="tag tag--cycling">Велосипед</span>
+                <span class="tag tag--tourism">Туризм</span>
+                <span class="tag tag--run">Бег</span>
+              </div>
+            </section>
+
+            <section class="profile-section profile-section--route profile-strip__panel">
+              <h2 id="map-title" class="profile-section__title">Недавний маршрут</h2>
+              <p class="profile-route__meta">Велосипед · 24,6 км · 1 октября 2026</p>
+              <div class="profile-route__map">
+                <img class="profile-mini-map" src="../assets/images/map.webp" width="640" height="360" alt="">
+              </div>
+            </section>
+
+          </div>
+
+          <dialog class="profile-modal" id="profile-modal" aria-labelledby="profile-modal-title">
+            <div class="profile-modal__panel" role="document">
+              <header class="profile-modal__header">
+                <h2 class="profile-modal__title" id="profile-modal-title"></h2>
+                <button class="icon-button profile-modal__close" type="button" aria-label="Закрыть">
+                  <span class="profile-modal__close-glyph" aria-hidden="true">×</span>
+                </button>
+              </header>
+              <div class="profile-modal__body" id="profile-modal-body"></div>
             </div>
+          </dialog>
+
+          <section class="profile-composer" aria-label="Написать пост">
+            <form class="profile-composer__form" id="profile-post-form">
+              <label class="visually-hidden" for="profile-post-text">Текст поста</label>
+              <textarea class="profile-composer__input" id="profile-post-text" name="text" rows="3" required placeholder="Поделитесь тренировкой или планами…"></textarea>
+              <div class="profile-composer__toolbar">
+                <fieldset class="profile-composer__tags">
+                  <legend class="profile-composer__tags-label">Виды спорта</legend>
+                  <label class="profile-composer__tag">
+                    <input type="checkbox" name="tag-climbing" value="on">
+                    <span class="tag tag--climbing">Скалолазание</span>
+                  </label>
+                  <label class="profile-composer__tag">
+                    <input type="checkbox" name="tag-run" value="on">
+                    <span class="tag tag--run">Бег</span>
+                  </label>
+                  <label class="profile-composer__tag">
+                    <input type="checkbox" name="tag-cycling" value="on">
+                    <span class="tag tag--cycling">Велосипед</span>
+                  </label>
+                  <label class="profile-composer__tag">
+                    <input type="checkbox" name="tag-tourism" value="on">
+                    <span class="tag tag--tourism">Туризм</span>
+                  </label>
+                </fieldset>
+                <button class="button button--primary profile-composer__submit" type="submit">Опубликовать</button>
+              </div>
+            </form>
           </section>
 
-          <section class="profile-section profile-section--route">
-            <h2 id="map-title" class="profile-section__title">Недавний маршрут</h2>
-            <p class="profile-route__meta">Велосипед · 24,6 км · 1 октября 2026</p>
-            <div class="profile-route__map">
-              <img class="profile-mini-map" src="../assets/images/map.webp" width="640" height="360" alt="">
-            </div>
-          </section>
-
-          <section class="profile-section profile-section--clubs">
-            <h2 id="clubs-title" class="profile-section__title">Мои площадки</h2>
-            <ul class="profile-clubs">
-              <li class="profile-club">
-                <img class="profile-club__logo" src="../assets/images/severnaya-stena-logo.webp" width="44" height="44" alt="">
-                <div class="profile-club__body">
-                  <p class="profile-club__name">Северная стена</p>
-                  <p class="profile-club__meta">Скалодром · тренер</p>
-                </div>
-              </li>
-              <li class="profile-club">
-                <img class="profile-club__logo" src="../assets/images/dirt-spb.webp" width="44" height="44" alt="">
-                <div class="profile-club__body">
-                  <p class="profile-club__name">Bike &amp; dirt SPB</p>
-                  <p class="profile-club__meta">Велоклуб · участник</p>
-                </div>
-              </li>
-              <li class="profile-club">
-                <img class="profile-club__logo" src="../assets/images/park-300-logo.webp" width="44" height="44" alt="">
-                <div class="profile-club__body">
-                  <p class="profile-club__name">Парк 300-летия</p>
-                  <p class="profile-club__meta">Outdoor · организатор</p>
-                </div>
-              </li>
-            </ul>
-          </section>
-
-          <section class="profile-section profile-section--events">
-            <h2 id="events-title" class="profile-section__title">Ближайшие тренировки</h2>
-            <ul class="profile-events">
-              <li class="profile-event">
-                <time class="profile-event__date" datetime="2026-10-05">5 окт</time>
-                <div class="profile-event__body">
-                  <p class="profile-event__title">Силовая на скалодроме</p>
-                  <p class="profile-event__meta">19:00 · Северная стена · 8 мест</p>
-                  <span class="tag tag--climbing profile-event__tag">Скалолазание</span>
-                </div>
-              </li>
-              <li class="profile-event">
-                <time class="profile-event__date" datetime="2026-10-08">8 окт</time>
-                <div class="profile-event__body">
-                  <p class="profile-event__title">Вечерний заезд по набережным</p>
-                  <p class="profile-event__meta">18:30 · Bike &amp; dirt SPB · 18 км</p>
-                  <span class="tag tag--cycling profile-event__tag">Велосипед</span>
-                </div>
-              </li>
-            </ul>
-          </section>
+          <div class="profile-posts feed" id="profile-posts" aria-label="Публикации"></div>
         </div>
       </main>
       </div>
+    <script src="../scripts/pages/profile.js" type="module"></script>
   </body>
 </html>

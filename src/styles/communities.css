@@ -1,8 +1,33 @@
+.communities-search {
+  margin-bottom: var(--space-16);
+}
+
+.communities-search[hidden] {
+  display: none !important;
+}
+
+.communities-search .search-field img {
+  flex-shrink: 0;
+  width: 1.25rem;
+  height: 1.25rem;
+  opacity: 0.55;
+}
+
 .communities-page {
   display: flex;
   flex-direction: column;
   gap: var(--space-16);
-  padding: var(--space-16);
+  width: 100%;
+}
+
+.communities-page__empty {
+  padding: var(--space-24);
+  font-size: var(--font-size-md);
+  color: var(--color-text-muted);
+  text-align: center;
+  background-color: var(--color-bg-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
 }
 
 .community-list {
