@@ -51,6 +51,15 @@ body {
     flex: 1 1 auto;
     min-height: calc(100dvh - var(--header-height) - 1px);
   }
+
+  .app__main:has(> .profile-page) {
+    padding-inline: var(--space-12);
+  }
+
+  .app__main > .profile-page {
+    width: 100%;
+    max-width: none;
+  }
 }
 
 .app__main {
@@ -78,6 +87,7 @@ body {
 
 .app-header__brand {
   position: absolute;
+  z-index: 1;
   left: var(--space-16);
   display: flex;
   align-items: center;
@@ -112,11 +122,14 @@ body {
 }
 
 .app-header__name {
+  overflow: hidden;
   font-size: var(--font-size-lg);
   font-weight: var(--font-weight-bold);
   line-height: var(--line-height-tight);
   letter-spacing: -0.02em;
   color: var(--color-brand);
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .app-header__page-title {
@@ -134,13 +147,34 @@ body {
 
 .app-header__actions {
   position: absolute;
+  z-index: 1;
   top: 0;
-  right: 0;
+  right: var(--space-16);
   bottom: 0;
   display: flex;
   align-items: center;
   justify-content: flex-end;
   gap: var(--space-8);
+}
+
+@media (max-width: 22.49rem) {
+  .app-header__name {
+    display: none;
+  }
+
+  .app-header__brand {
+    gap: 0;
+    max-width: 2.25rem;
+  }
+
+  .app-header__main {
+    padding-inline: 3rem 4.75rem;
+  }
+
+  .app-header__page-title {
+    max-width: none;
+    font-size: var(--font-size-md);
+  }
 }
 
 .icon-button {
@@ -158,9 +192,10 @@ body {
   background-color: var(--color-interaction-hover);
 }
 
+.icon-button:focus,
 .icon-button:focus-visible {
-  outline: 2px solid var(--color-brand);
-  outline-offset: 2px;
+  outline: none;
+  box-shadow: none;
 }
 
 .icon-button__glyph {
@@ -460,6 +495,10 @@ body {
   .app__main > .profile-page {
     max-width: min(100%, var(--layout-content-profile));
   }
+
+  .app__main:has(> .profile-page) {
+    padding-inline: var(--space-24);
+  }
 }
 
 .app__main--map {
@@ -493,5 +532,9 @@ body {
 @media (min-width: 80rem) {
   .app__main:not(.app__main--map) {
     padding-inline: var(--space-40);
+  }
+
+  .app__main:has(> .profile-page) {
+    padding-inline: var(--space-32);
   }
 }

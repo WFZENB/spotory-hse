@@ -36,14 +36,30 @@
 .calendar-widget__day {
   position: relative;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
+  gap: var(--space-2);
   min-height: 2.75rem;
-  border-radius: var(--radius-sm);
+  padding: 0 0 var(--space-4);
+  font: inherit;
   font-size: var(--font-size-sm);
   font-weight: var(--font-weight-medium);
   color: var(--color-text-secondary);
   text-align: center;
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  border-radius: var(--radius-sm);
+}
+
+.calendar-widget__day:focus-visible {
+  outline: 2px solid var(--color-brand);
+  outline-offset: 2px;
+}
+
+.calendar-widget__day:hover:not(.calendar-widget__day--selected) {
+  background-color: var(--color-interaction-hover);
 }
 
 .calendar-widget__day--muted {
@@ -57,16 +73,25 @@
   background-color: var(--color-brand);
 }
 
-.calendar-widget__day--event:not(.calendar-widget__day--selected)::after {
-  content: "";
-  position: absolute;
-  bottom: 0.35rem;
-  left: 50%;
+.calendar-widget__markers {
+  display: flex;
+  flex-shrink: 0;
+  gap: 0.1875rem;
+  align-items: center;
+  justify-content: center;
+  min-height: 0.3125rem;
+}
+
+.calendar-widget__marker {
+  flex-shrink: 0;
   width: 0.3125rem;
   height: 0.3125rem;
   border-radius: var(--radius-pill);
   background-color: var(--color-brand);
-  transform: translateX(-50%);
+}
+
+.calendar-widget__day--selected .calendar-widget__marker {
+  background-color: var(--color-text-inverse);
 }
 
 .event-list {
@@ -89,13 +114,21 @@
   gap: var(--space-12);
 }
 
+.event-list__empty {
+  padding: var(--space-20);
+  font-size: var(--font-size-md);
+  color: var(--color-text-muted);
+  text-align: center;
+  background-color: var(--color-bg-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+}
+
 .event-card {
-  display: grid;
-  grid-template-columns: 3.75rem minmax(0, 1fr);
-  grid-template-rows: auto auto;
-  column-gap: var(--space-16);
-  row-gap: var(--space-6);
-  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+  align-items: flex-start;
   padding: var(--space-20);
   background-color: var(--color-bg-surface);
   border: 1px solid var(--color-border);
@@ -103,47 +136,36 @@
   box-shadow: var(--shadow-surface);
 }
 
-.event-card__date {
-  grid-row: 1 / -1;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: var(--space-2);
-  width: 3.75rem;
-  height: 3.75rem;
-  flex-shrink: 0;
-  border-radius: var(--radius-md);
-  background-color: var(--color-brand-soft);
-  color: var(--color-brand);
-}
-
-.event-card__day {
-  font-size: var(--font-size-xl);
-  font-weight: var(--font-weight-bold);
-  line-height: 1;
-}
-
-.event-card__month {
-  font-size: var(--font-size-xs);
-  font-weight: var(--font-weight-medium);
-  text-transform: uppercase;
-}
-
 .event-card__name {
-  grid-column: 2;
-  grid-row: 1;
   font-size: var(--font-size-md);
   font-weight: var(--font-weight-medium);
   line-height: var(--line-height-normal);
 }
 
 .event-card__venue {
-  grid-column: 2;
-  grid-row: 2;
   font-size: var(--font-size-sm);
   line-height: var(--line-height-normal);
   color: var(--color-text-muted);
+}
+
+.event-stack {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  background-color: var(--color-bg-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-surface);
+}
+
+.event-stack .event-card {
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.event-stack .event-card + .event-card {
+  border-top: 1px solid var(--color-border);
 }
 
 @media (min-width: 48rem) {
@@ -153,8 +175,6 @@
   }
 
   .event-list__items {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: var(--space-16);
   }
 }
@@ -173,7 +193,6 @@
   }
 
   .event-list__items {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: var(--space-20);
   }
 }
@@ -185,9 +204,5 @@
 
   .calendar-widget__day {
     min-height: 3.5rem;
-  }
-
-  .event-list__items {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 }
