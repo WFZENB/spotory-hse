@@ -1,3 +1,4 @@
+import { initAppNotifications } from '../init/app-notifications.js';
 import { CURRENT_USER } from '../data/user.js';
 import { PostsStore } from '../store/posts-store.js';
 import { bindProfileModal } from '../ui/profile-modal.js';
@@ -12,6 +13,8 @@ const TAG_OPTIONS = [
 ];
 
 document.addEventListener('DOMContentLoaded', () => {
+  initAppNotifications();
+
   const postsRoot = document.getElementById('profile-posts');
   const form = document.getElementById('profile-post-form');
   const modalDialog = document.getElementById('profile-modal');
