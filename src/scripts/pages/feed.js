@@ -1,7 +1,9 @@
+import { initAppNotifications } from '../init/app-notifications.js';
 import { PostsStore } from '../store/posts-store.js';
 import { renderFeed } from '../ui/feed-ui.js';
 
 document.addEventListener('DOMContentLoaded', () => {
+  initAppNotifications();
   const feedRoot = document.getElementById('feed');
   const searchPanel = document.getElementById('feed-search');
   const searchInput = document.getElementById('feed-search-input');

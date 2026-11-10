@@ -66,6 +66,45 @@
   padding: var(--space-12);
 }
 
+.map-geolocation {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-8);
+  padding: var(--space-12) var(--space-16) var(--space-16);
+  border-top: 1px solid var(--color-border);
+}
+
+.map-geolocation__label {
+  margin: 0;
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.map-geolocation__coords {
+  margin: 0;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-text-primary);
+}
+
+.map-geolocation__status {
+  margin: 0;
+  font-size: var(--font-size-xs);
+  line-height: var(--line-height-normal);
+  color: var(--color-text-secondary);
+}
+
+.map-geolocation__refresh {
+  align-self: flex-start;
+  min-height: 2.25rem;
+  padding: var(--space-8) var(--space-12);
+  font-size: var(--font-size-xs);
+}
+
 .map-filter {
   padding: var(--space-8) var(--space-12);
   border: 1px solid var(--color-border);

@@ -1,7 +1,9 @@
+import { initAppNotifications } from '../init/app-notifications.js';
 import { CommunitiesStore } from '../store/communities-store.js';
 import { renderCommunities } from '../ui/communities-ui.js';
 
 document.addEventListener('DOMContentLoaded', () => {
+  initAppNotifications();
   const listRoot = document.getElementById('communities-root');
   const searchPanel = document.getElementById('communities-search');
   const searchInput = document.getElementById('communities-search-input');

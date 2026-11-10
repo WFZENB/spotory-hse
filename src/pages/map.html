@@ -25,7 +25,7 @@
             <button class="icon-button" type="button">
               <img class="icon-button__glyph" src="../assets/icons/search.svg" alt="">
             </button>
-            <button class="icon-button" type="button">
+            <button class="icon-button" type="button" id="app-notifications" aria-label="Уведомления о событиях">
               <img class="icon-button__glyph" src="../assets/icons/bell.svg" alt="">
             </button>
           </div>
@@ -91,6 +91,14 @@
                 <button class="map-filter" type="button">Велосипед</button>
                 <button class="map-filter" type="button">Бег</button>
               </div>
+              <div class="map-geolocation" id="map-geolocation" aria-labelledby="map-geolocation-label">
+                <p class="map-geolocation__label" id="map-geolocation-label">Ваши координаты</p>
+                <p class="map-geolocation__coords" id="map-geolocation-coords">—</p>
+                <button class="map-geolocation__refresh button button--ghost" type="button" id="map-geolocation-refresh">
+                  Обновить
+                </button>
+                <p class="map-geolocation__status" id="map-geolocation-status" role="status" aria-live="polite"></p>
+              </div>
             </div>
 
             <aside class="map-spot-panel map-surface">
@@ -121,5 +129,6 @@
         </div>
       </main>
       </div>
+    <script src="../scripts/pages/map.js" type="module"></script>
   </body>
 </html>

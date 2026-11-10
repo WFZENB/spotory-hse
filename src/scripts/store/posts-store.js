@@ -1,5 +1,11 @@
 import { INITIAL_POSTS } from '../data/posts.js';
 import { CURRENT_USER } from '../data/user.js';
+import {
+  applyStoredLikes,
+  mergeUserPosts,
+  savePostLike,
+  saveUserPost,
+} from '../web-api/posts-storage.js';
 
 function clonePosts(posts) {
   return posts.map((post) => ({
@@ -16,7 +22,8 @@ export class PostsStore {
   #listeners = new Set();
 
   constructor(initialPosts = INITIAL_POSTS) {
-    this.#posts = clonePosts(initialPosts);
+    this.#posts = mergeUserPosts(clonePosts(initialPosts));
+    applyStoredLikes(this.#posts);
   }
 
   subscribe(listener) {
@@ -66,6 +73,7 @@ export class PostsStore {
     }
     post.liked = !post.liked;
     post.likes += post.liked ? 1 : -1;
+    savePostLike(post.id, post.liked, post.likes);
     this.#notify();
   }
 
@@ -88,6 +96,7 @@ export class PostsStore {
       comments: 0,
     };
     this.#posts.unshift(post);
+    saveUserPost(post);
     this.#notify();
   }
 }
